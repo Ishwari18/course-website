@@ -1,0 +1,64 @@
+.first {
+  height: 95vh; /* Set your desired height here */
+  padding: 80px 20px; /* Add padding for spacing */
+  background-color: rgb(240, 233, 252);
+}
+.second {
+  background-color: rgb(227, 252, 195);
+  height: 100vh; /* Set your desired height here */
+  padding: 20px; /* Add padding for spacing */
+}
+.third {
+  background-color: rgb(240, 250, 228);
+  height: 170vh; /* Set your desired height here */
+  padding: 20px; /* Add padding for spacing */
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  position: relative;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+.third-content {
+    margin-top: 40px;
+}
+@media (max-width: 768px) {
+  /* For screens with a maximum width of 768px (mobile devices) */
+  .section {
+    height: 100vh; /* Set section height to 100% of viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section h1 {
+    font-size: 24px; /* Set font size for mobile devices */
+  }
+
+  .section h3 {
+    font-size: 16px; /* Set font size for mobile devices */
+    margin-top: 10px;
+  }
+}

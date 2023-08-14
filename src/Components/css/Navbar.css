@@ -1,0 +1,7 @@
+.navbar {
+  background-color: rgb(193, 164, 255);
+  z-index: 1000; 
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
