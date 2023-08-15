@@ -81,7 +81,7 @@ const Login = (props) => {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="contact-submitbtn">
             Submit
           </button>
         </form>

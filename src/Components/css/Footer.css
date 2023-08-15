@@ -1,5 +1,35 @@
 .Footer {
-    background-color: rgb(196, 215, 255);
-    height: 20vh;
-    padding: 20px;
+  padding: 20px;
+  margin: 0;
+}
+.footer-content {
+  height: 24vh;
+  background-color: #e8cdfa;
+  margin: 0;
+}
+
+.Footer-links {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+}
+.brandname {
+  text-decoration: none;
+  color: black;
+}
+.footer-menu {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  margin: 0;
+}
+.footer-menu:hover {
+  text-decoration: underline;
+}
+
+
+.lastline-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }

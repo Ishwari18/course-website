@@ -1,21 +1,121 @@
+@font-face {
+  font-family: r;
+  src: url(f/Roboto-Bold.ttf);
+}
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.iitname {
+  background-color: #ce97f5;
+}
 .first {
   height: 95vh; /* Set your desired height here */
-  padding: 80px 20px; /* Add padding for spacing */
+  padding: 10px 20px; /* Add padding for spacing */
   background-color: rgb(240, 233, 252);
 }
+.timer {
+  font-weight: 800;
+  font-size: 30px;
+  margin-top: 2%;
+}
+.time {
+  border: 1px solid black;
+  font-size: 30px;
+  background-color: rgb(253, 248, 162);
+  padding: 5px 20px;
+}
+.heading2 {
+  text-align: center;
+  font-weight: 700;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 12%;
+}
+
+.second-boxes {
+  margin-left: 5%;
+  margin-top: 3%;
+}
+.heading3 {
+  font-weight: 700;
+}
+.box {
+  width: 60%;
+  margin-top: 5%;
+  justify-content: left;
+}
+.box li {
+  font-size: 18px;
+  justify-content: left;
+}
+.box-2 {
+  margin-top: 4em;
+  text-decoration: none;
+  width: 96%;
+  justify-content: left;
+  justify-content: space-between;
+}
+.box-2-list {
+  display: flex;
+  justify-content: space-between;
+}
+.box-2-list div {
+  margin-right: 2%;
+  margin-top: 2%;
+  padding: 4%;
+  background-color: #e8cdfa;
+  box-shadow: 100px black;
+}
+.first-content {
+  width: 48%;
+  margin-left: 5%;
+  margin-top: 6%;
+  text-align: left;
+}
+.first-content h4 {
+  margin-top: 1em;
+}
 .second {
-  background-color: rgb(227, 252, 195);
-  height: 100vh; /* Set your desired height here */
+  background-color: rgb(240, 233, 252);
+  height: 130vh; /* Set your desired height here */
   padding: 20px; /* Add padding for spacing */
 }
 .third {
-  background-color: rgb(240, 250, 228);
-  height: 170vh; /* Set your desired height here */
+  height: 70vh; /* Set your desired height here */
   padding: 20px; /* Add padding for spacing */
+  background-color: rgb(240, 233, 252);
+}
+.third-boxes {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.third-boxes div {
+  margin: 0px 5%;
+  width: 50%;
+}
+.course-content {
+  width: 88%;
+  margin-left: 5%;
+  margin-top: 4%;
+}
+.course-content a {
+  color: black;
+}
+.course-content a:hover {
+  background-color: #e8cdfa;
+}
+.course-content h2 {
+  margin: 1em 0;
 }
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: #eee;
+  background-color: #f7ecff;
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -30,7 +130,7 @@
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: #edd6fd;
 }
 
 /* Style the accordion panel. Note: hidden by default */
@@ -41,7 +141,7 @@
   overflow: hidden;
 }
 .third-content {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 @media (max-width: 768px) {
   /* For screens with a maximum width of 768px (mobile devices) */

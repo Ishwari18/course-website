@@ -1,5 +1,28 @@
 .main {
-    height: 100vh; /* Set your desired height here */
-    padding: 70px 20px; /* Add padding for spacing */
-    background-color: rgb(247, 241, 215);
+  height: 170vh; /* Set your desired height here */
+  padding: 70px 20px; /* Add padding for spacing */
+  background-color: rgb(245, 236, 250);
+}
+.abttext {
+  text-align: left;
+  margin: auto;
+  margin-left: 5%;
+  width: 86%;
+}
+.abttimer {
+  text-align: left;
+  margin: auto;
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 86%;
+  font-weight: 700;
+  font-size: 25px;
+}
+.time {
+  padding: 10px 30px;
+  background-color: white;
+  font-weight: 800;
+}
+.bg {
+  background-color: rgb(218, 171, 244);
 }

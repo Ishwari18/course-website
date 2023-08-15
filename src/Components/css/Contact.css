@@ -1,4 +1,31 @@
-.contact {
-    background-color: rgb(249, 249, 170);
-    height: 80vh;
+
+.Contact {
+    background-color: rgb(240, 233, 252);
+    height: 60vh;
+    padding: 30px 100px;
 }
+.contact h2 {
+  margin-left: 40px;
+  padding-top: 30px;
+}
+.contact-form {
+  padding: 40px;
+}
+.contact-submitbtn {
+  text-decoration: none;
+  background-color: #ce97f5;
+  padding: 10px 20px;
+  color: black;
+}
+.contact-submitbtn:hover {
+  background-color: #e7cbfb;
+}
+.custom-input {
+    height: 10vh; /* Adjust the width as desired */
+  }
+ 
+  
+  
+  
+  
+  

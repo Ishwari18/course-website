@@ -1,60 +1,119 @@
-import React from "react";
-import "./css/About.css"; 
+import React, { useState, useEffect } from "react";
+import "./css/About.css";
+import { accordionData } from "./accordionData";
 
 export const About = () => {
+  const [activeAccordion, setActiveAccordion] = useState(null);
+  const [timeLeft, setTimeLeft] = useState("");
+
+  const toggleAccordion = (index) => {
+    if (activeAccordion === index) {
+      setActiveAccordion(null); // Close the open accordion if clicked again
+    } else {
+      setActiveAccordion(index);
+    }
+  };
+
+  useEffect(() => {
+    // Calculate time left until the end of the day in India (IST)
+    const now = new Date();
+    const endOfDay = new Date(now);
+    endOfDay.setHours(23, 59, 59, 999); // Set to the end of the day
+    const timeDifference = endOfDay - now;
+
+    const hoursLeft = Math.floor(timeDifference / (1000 * 60 * 60));
+    const minutesLeft = Math.floor(
+      (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const secondsLeft = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    setTimeLeft(`${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`);
+
+    // Update the time left every second
+    const interval = setInterval(() => {
+      const newNow = new Date();
+      const newTimeDifference = endOfDay - newNow;
+
+      const newHoursLeft = Math.floor(newTimeDifference / (1000 * 60 * 60));
+      const newMinutesLeft = Math.floor(
+        (newTimeDifference % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const newSecondsLeft = Math.floor(
+        (newTimeDifference % (1000 * 60)) / 1000
+      );
+
+      setTimeLeft(`${newHoursLeft}h : ${newMinutesLeft}m : ${newSecondsLeft}s`);
+    }, 1000);
+
+    // Clean up interval when component unmounts
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
-      <div className="main"><h5>
-        Description Smart Contracts? They're here. The Ethereum Blockchain?
-        Covered. Solidity? Yep!
-      </h5>
-      <p>
-        There can be no understating it: Ethereum and Blockchain technology is
-        the most disruptive force in years. Companies cannot hire developers who
-        understand blockchain technologies fast enough, but there are a tiny
-        number of resources published to help you truly understand what
-        blockchains are used for, let alone build apps with them. That's the
-        purpose of this course: to be the best resource online for learning
-        about Ethereum, blockchains, and how to build apps with this new
-        technology.
-      </p>
-      <p>
-        The development community is still figuring out the best way to use
-        Ethereum in the creation of new and exciting apps. I spent a tremendous
-        amount of time to research and create best practice for interfacing with
-        Ethereum from Javascript. I can't overstate it enough; this course will
-        show you the best and most easily repeatable patterns for creating
-        production-ready apps with Ethereum.
-      </p>
-      <h5>What tools and libraries are used?</h5>
-      <p>
-        The Ethereum tech ecosystem is in constant change. Don't be fooled by
-        other courses that mention how you'll learn a dozen different libraries!
-        Every library that you'll use with Ethereum breaks and is deprecated on
-        a near-weekly basis! Instead, this course will teach you how to assemble
-        your own boilerplate package to develop, compile, and test Smart
-        Contracts. By learning the core technologies, you'll be prepared to
-        adjust to Ethereum no matter how the ecosystem changes.
-      </p>
-      <h5>What is Ethereum?</h5>
-      pEthereum is a cryptocurrency much like Bitcoin, and it has been heralded
-      as Bitcoins successor. Whereas Bitcoin currently has issues scaling with
-      an increasing backlog of transactions, Ethereum is poised to surpass
-      Bitcoin in performance, popularity, and value. Ethereum was created to
-      help developers like you create applications focused around transferring
-      money or value from one party to another.
-      <p></p>
-      <h5>What is Solidity?</h5>
-      <p>
-        Solidity is a programming language for writing Smart Contracts.
-        Essentially, think of it as a way to control a bank account with code.
-        With Solidity, we can write applications that simulate a crowd funding
-        campaign, a lottery, a loan, or any other type of financial instrument.
-        Don't be intimidated by learning 'another' programming language;
-        Solidity is known to be quite similar to Javascript and exceptionally
-        easy to pick up for anyone who has previous JS experience. This course
-        will give you all the tools you need to master Solidity.
-      </p></div>
+      <div className="main">
+        <div className="abttext">
+          <h5>
+            Description Smart Contracts? They're here. The Ethereum Blockchain?
+            Covered. Solidity? Yep!
+          </h5>
+          <p>
+            There can be no understating it: Ethereum and Blockchain technology
+            is the most disruptive force in years. Companies cannot hire
+            developers who understand blockchain technologies fast enough, but
+            there are a tiny number of resources published to help you truly
+            understand what blockchains are used for, let alone build apps with
+            them. That's the purpose of this course: to be the best resource
+            online for learning about Ethereum, blockchains, and how to build
+            apps with this new technology.
+          </p>
+          <p>
+            The development community is still figuring out the best way to use
+            Ethereum in the creation of new and exciting apps. I spent a
+            tremendous amount of time to research and create best practice for
+            interfacing with Ethereum from Javascript. I can't overstate it
+            enough; this course will show you the best and most easily
+            repeatable patterns for creating production-ready apps with
+            Ethereum.
+          </p>
+          <h5>What tools and libraries are used?</h5>
+        </div>
+
+        <div className="course-content">
+          <h2>
+            <u>Course content</u>
+          </h2>
+          {accordionData.map((accordion, index) => (
+            <div key={index}>
+              <button
+                className={`accordion ${
+                  activeAccordion === index ? "active" : ""
+                }`}
+                onClick={() => toggleAccordion(index)}
+              >
+                {accordion.title}
+              </button>
+              <div
+                className="panel"
+                style={{
+                  display: activeAccordion === index ? "block" : "none",
+                }}
+              >
+                <ul>
+                  {accordion.content.map((item, itemIndex) => (
+                    <li key={itemIndex}>
+                      {item.topic} - {item.time}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="abttimer">
+         <span className="bg"> Purchase today to get 50% off /-</span>
+          <br /> <br />Deal lasts until <span className="time">{timeLeft}</span>
+        </div>
+      </div>
     </>
   );
 };
