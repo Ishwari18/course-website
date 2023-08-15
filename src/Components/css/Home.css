@@ -153,22 +153,58 @@ h2 {
 .third-content {
   margin-top: 40px;
 }
+/* For screens with a maximum width of 768px (mobile devices) */
 @media (max-width: 768px) {
-  /* For screens with a maximum width of 768px (mobile devices) */
-  .section {
-    height: 100vh; /* Set section height to 100% of viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .first-content {
+    width: 100%; /* Take full width on mobile */
+    margin-left: 0; /* No margin on the left */
+    margin-top: 4%; /* Adjust margin for spacing */
+    text-align: center; /* Center align text */
   }
 
-  .section h1 {
-    font-size: 24px; /* Set font size for mobile devices */
+  .timer {
+    font-size: 24px; /* Reduce font size */
+    margin-top: 2%;
   }
 
-  .section h3 {
-    font-size: 16px; /* Set font size for mobile devices */
-    margin-top: 10px;
+  .second-boxes {
+    margin-left: 0; /* No margin on the left */
+    margin-top: 4%; /* Adjust margin for spacing */
+  }
+
+  .heading2 {
+    font-size: 24px; /* Reduce font size */
+    margin-bottom: 8%; /* Adjust margin for spacing */
+  }
+
+  .box,
+  .box-2 {
+    width: 100%; /* Take full width on mobile */
+    margin-top: 3%; /* Adjust margin for spacing */
+  }
+
+  .box li {
+    font-size: 16px; /* Reduce font size */
+  }
+
+  .third-boxes {
+    width: 100%; /* Take full width on mobile */
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .third-boxes div {
+    margin: 2% 0; /* Adjust margin for spacing */
+    width: 100%; /* Take full width on mobile */
+  }
+
+  .course-content {
+    width: 100%; /* Take full width on mobile */
+    margin-left: 0; /* No margin on the left */
+    margin-top: 4%; /* Adjust margin for spacing */
+  }
+
+  .course-content h2 {
+    margin: 1em 0;
+    font-size: 24px; /* Reduce font size */
   }
 }
