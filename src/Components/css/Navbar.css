@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono:wght@300&display=swap");
 @font-face {
   font-family: val;
   src: url(f/Valorant\ Font.ttf);
@@ -7,16 +6,16 @@
 
 .navbar {
   background-color: rgb(240, 233, 252);
-  z-index: 1000; 
+  z-index: 1000;
   width: 100%;
   top: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-weight: 700;
   padding: 0.8% 2%;
   text-align: center;
   box-shadow: black 100px;
 }
-.nav-link:hover{
+.nav-link:hover {
   text-decoration: underline;
 }
 
@@ -28,11 +27,52 @@
   margin: 4%;
   border: 1px black solid;
 }
-.btnn:hover{
+.btnn:hover {
   background-color: #e7cbfb;
 }
 .brandname {
   font-family: val;
   font-size: 2em;
   font-weight: 600;
+}
+.menui {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  * {
+    overflow-x: hidden;
+  }
+  .brandname {
+    font-size: 25px;
+  }
+  .menui {
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+  }
+  .menu-link {
+    text-decoration: none;
+    color: black;
+    background-color: #f2e0ff;
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 5% 20%;
+  }
+  #navbarSupportedContent {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #e0b4ff;
+  }
+  .menu {
+    height: 100vh;
+  }
+
+  .show {
+    display: inline-block;
+  }
 }

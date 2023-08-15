@@ -9,12 +9,30 @@
   font-size: 30px;
   background: #ce97f5;
   margin-top: 2%;
-  
 }
-.waitlistbtn:hover{
-    background: #e4c6f9;
+.waitlistbtn:hover {
+  background: #e4c6f9;
 }
-.waitlist-form  {
-    width: 80%;
+.waitlist-form {
+  width: 80%;
 }
 
+@media (max-width: 768px) {
+  .waitlist {
+    font-size: 14px;
+    background-color: rgb(240, 233, 252);
+    height: auto;
+    padding: 40px 40px;
+  }
+  .waitlistbtn {
+    border: 1px solid black;
+    font-size: 20px;
+    margin-top: 10%;
+  }
+  .waitlist h3 {
+    font-size: 18px;
+  }
+  .waitlist h5 {
+    font-size: 14px;
+  }
+}

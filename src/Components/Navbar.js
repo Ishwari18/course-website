@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./css/Navbar.css"; 
+import logo from './images/icons8-menu-50.png';
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
       <nav className="navbar navbar-expand-lg ">
@@ -35,6 +41,18 @@ export const Navbar = () => {
             <Link className="btnn" to="/login" role="button">Login</Link>
                     <Link className="btnn" to="/signup" role="button">Signup</Link>
             </div>
+          </div>
+          <div className="menui " onClick={toggleMenu}>
+          <img src={logo} alt="Logo" />
+          {isMenuOpen && (
+              <div  className={`menu ${isMenuOpen ? 'show' : ''}`} id="navbarSupportedContent">
+                <Link className="menu-link" to="/about">About</Link>
+                <Link className="menu-link" to="/contact">Contact</Link>
+                <Link className="menu-link" to="/waitlist">Waitlist</Link>
+                <Link className="menu-link" to="/login">Login</Link>
+                <Link className="menu-link" to="/signup">Signup</Link>
+              </div>
+            )}
           </div>
         </div>
       </nav>

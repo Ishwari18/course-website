@@ -18,14 +18,14 @@ h2 {
   padding: 10px 20px; /* Add padding for spacing */
   background-color: rgb(240, 233, 252);
 }
-.first-content a{
+.first-content a {
   text-decoration: none;
   color: black;
 }
 .heading12:hover {
   text-decoration: underline;
 }
-.first-content span:hover{
+.first-content span:hover {
   cursor: pointer;
 }
 .timer {
@@ -155,16 +155,85 @@ h2 {
 }
 /* For screens with a maximum width of 768px (mobile devices) */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+    overflow-y: hidden;
+  }
+  h2 {
+    font-size: 22px;
+    overflow-y: hidden;
+  }
+  .first {
+    height: auto;
+    overflow-y: hidden;
+  }
+  h3 {
+    font-size: 18px;
+    overflow-y: hidden;
+  }
+  h4 {
+    font-size: 14px;
+    overflow-y: hidden;
+  }
+  .second h4 {
+    font-size: 16px;
+    width: 88%;
+    overflow-y: hidden;
+  }
+  .box-2-list {
+    display: inline-block;
+    overflow-y: hidden;
+  }
+  .second-boxes li {
+    font-size: 10px;
+  }
+  .box {
+    margin: 10% 0;
+    padding: 10% 0;
+  }
+  .heading3 {
+    margin: 5% 0;
+    background-color: #ce97f5;
+    width: auto;
+    display: inline-block;
+  }
+  .second {
+    height: auto;
+  }
+  .box li {
+    font-size: 10px;
+    list-style-type: circle;
+  }
+  .box ul {
+    font-size: 10px;
+  }
+  .heading12 {
+    text-decoration: underline;
+  }
+  .third {
+    height: auto;
+  }
+  .box-2-list div {
+    margin-top: 10%;
+  }
   .first-content {
     width: 100%; /* Take full width on mobile */
     margin-left: 0; /* No margin on the left */
-    margin-top: 4%; /* Adjust margin for spacing */
+    margin-top: 20%; /* Adjust margin for spacing */
     text-align: center; /* Center align text */
+    overflow-y: hidden;
+  }
+  .first {
+    height: 80vh;
   }
 
   .timer {
     font-size: 24px; /* Reduce font size */
     margin-top: 2%;
+  }
+  .time {
+    font-size: 16px;
+    display: inline-block;
   }
 
   .second-boxes {
@@ -197,14 +266,5 @@ h2 {
     width: 100%; /* Take full width on mobile */
   }
 
-  .course-content {
-    width: 100%; /* Take full width on mobile */
-    margin-left: 0; /* No margin on the left */
-    margin-top: 4%; /* Adjust margin for spacing */
-  }
-
-  .course-content h2 {
-    margin: 1em 0;
-    font-size: 24px; /* Reduce font size */
-  }
+  
 }

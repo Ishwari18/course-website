@@ -3,3 +3,11 @@
     height: 80vh;
     padding: 80px 100px;
 }
+
+@media (max-width: 768px) {
+    .Login {
+        background-color: rgb(240, 233, 252);
+        height: 60vh;
+        padding: 70px 30px;
+    }
+}

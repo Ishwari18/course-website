@@ -27,9 +27,24 @@
   text-decoration: underline;
 }
 
-
 .lastline-links {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .Footer {
+    overflow-y: hidden;
+    height: auto;
+  }
+  .Footer-links {
+    height: auto;
+    margin: 0;
+  }
+  .footer-content {
+    height: auto;
+  }
+  .lastline-links {
+    display: inline-block;
+  }
 }

@@ -52,7 +52,7 @@ export const Home = () => {
             The Complete beggingers's Guide to blockchain and web3 development.
           </h4>
           <div className="timer">
-            50% off until <span className="time">{timeLeft}</span>
+            50% off , valid for <span className="time">{timeLeft}</span>
           </div>
           <h4 className="heading12">
             <span className="iitname">Limited Seats,</span>{" "}
@@ -63,10 +63,10 @@ export const Home = () => {
 
       {/* second section */}
       <section className=" section second">
-        <h3 className="heading2">
+        <h4 className="heading2">
           Learn EVM-developemnt, Solidity, and Smart Contracts technology to
           build production-ready apps based on the blockchain
-        </h3>
+        </h4>
         <div className="second-boxes">
           <div className="box">
             <h3 className="heading3">What you'll learn</h3>

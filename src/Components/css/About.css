@@ -8,8 +8,8 @@
   margin: auto;
   margin-left: 5%;
   width: 86%;
-  
 }
+
 .abttimer {
   text-align: left;
   margin: auto;
@@ -37,4 +37,42 @@
   position: fixed;
   display: inline-block;
   width: 10%;
+}
+
+@media (max-width: 768px) {
+  .abttext {
+    text-align: left;
+    margin: auto;
+    margin-left: 2%;
+    width: 95%;
+    overflow-y: hidden;
+    font-size: 14px;
+    height: 110vh;
+  }
+  .abttext h5 {
+    overflow-y: hidden;
+  }
+  .abttimer {
+    text-align: left;
+    margin: auto;
+    margin-left: 5%;
+    width: 86%;
+    font-weight: 700;
+    font-size: 25px;
+    height: auto;
+    display: none;
+  }
+  .course-content {
+    width: 100%; /* Take full width on mobile */
+    margin-left: 0; /* No margin on the left */
+    margin-top: 4%; /* Adjust margin for spacing */
+  }
+
+  .course-content h2 {
+    margin: 1em 0;
+    font-size: 24px; /* Reduce font size */
+  }
+  .content-list {
+    list-style-type: disc;
+  }
 }
