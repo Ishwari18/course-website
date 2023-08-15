@@ -5,9 +5,13 @@ const Waitlist = require("../models/Waitlist");
 
 router.post("/", fetchuser, async (req, res) => {
   try {
+    const { name, number } = req.body;
+
     // Create a new waitlist entry
     const newWaitlistEntry = new Waitlist({
-      user: req.user.id, // Fetch user ID from the middleware
+      user: req.user.id,
+      name: name,
+      number: number,
     });
 
     // Save the waitlist entry to the database

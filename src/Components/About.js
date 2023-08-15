@@ -48,6 +48,8 @@ export const About = () => {
     // Clean up interval when component unmounts
     return () => clearInterval(interval);
   }, []);
+
+
   return (
     <>
       <div className="main">
@@ -88,14 +90,15 @@ export const About = () => {
                 className={`accordion ${
                   activeAccordion === index ? "active" : ""
                 }`}
-                onClick={() => toggleAccordion(index)}
+                onMouseEnter={() => setActiveAccordion(index)}
+                onMouseLeave={() => setActiveAccordion(null)}
               >
                 {accordion.title}
               </button>
               <div
-                className="panel"
+                className="content-list"
                 style={{
-                  display: activeAccordion === index ? "block" : "none",
+                  display: activeAccordion === index ? "inline-block" : "none",
                 }}
               >
                 <ul>
@@ -105,6 +108,7 @@ export const About = () => {
                     </li>
                   ))}
                 </ul>
+                
               </div>
             </div>
           ))}
@@ -117,3 +121,23 @@ export const About = () => {
     </>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

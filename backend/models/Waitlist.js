@@ -7,6 +7,14 @@ const WaitlistSchema = new Schema({
     ref: 'User',
     required: true,
   },
+  name: {
+    type: String,
+    required: true,
+  },
+  number: {
+    type: String,
+    required: true,
+  },
   joinedAt: {
     type: Date,
     default: Date.now,

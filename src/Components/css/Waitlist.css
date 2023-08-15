@@ -8,9 +8,13 @@
   border: 1px solid black;
   font-size: 30px;
   background: #ce97f5;
-  padding: 5px 20px;
+  margin-top: 2%;
+  
 }
 .waitlistbtn:hover{
     background: #e4c6f9;
+}
+.waitlist-form  {
+    width: 80%;
 }
 
