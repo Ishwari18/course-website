@@ -1,0 +1,16 @@
+.waitlist {
+  background-color: rgb(240, 233, 252);
+  height: 60vh;
+  padding: 40px 100px;
+}
+
+.waitlistbtn {
+  border: 1px solid black;
+  font-size: 30px;
+  background: #ce97f5;
+  padding: 5px 20px;
+}
+.waitlistbtn:hover{
+    background: #e4c6f9;
+}
+

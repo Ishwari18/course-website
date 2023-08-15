@@ -1,44 +1,45 @@
+// Contact.js
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css/Contact.css";
 
 export const Contact = (props) => {
-  const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", query: "" });
   const [showAlert, setShowAlert] = useState(false);
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/login", {
+//http://localhost:5000/api/contact
+    // Simulate sending the form data to a backend API
+    const response = await fetch("http://localhost:5000/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        email: credentials.email,
-        password: credentials.password,
-      }),
+      body: JSON.stringify(formData), // Send the formData object
     });
-    const json = await response.json();
-    console.log(json);
-    if (json.success) {
-      // Save the auth token and redirect
-      localStorage.setItem("token", json.authtoken);
+
+    if (response.ok) {
       setShowAlert(true);
 
-      // Hide the alert after 3 seconds
       setTimeout(() => {
         setShowAlert(false);
       }, 3000);
 
-      navigate("/login");
+      navigate("/contact");
     } else {
-      alert("Invalid credentials");
+      alert("Error submitting the form");
     }
   };
 
-  const onChange = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   return (
@@ -46,53 +47,49 @@ export const Contact = (props) => {
       <div className="Contact">
         {showAlert && (
           <div className="alert alert-success" role="alert">
-            Login was successful!
+            Form submitted successfully!
           </div>
         )}
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-          <label htmlFor="name" className="form-label">
+            <label htmlFor="name" className="form-label">
               Name
             </label>
             <input
-              type="name"
+              type="text"
               className="form-control"
-              value={credentials.email}
-              onChange={onChange}
-              id="email"
+              value={formData.name}
+              onChange={handleChange}
+              id="name"
               name="name"
-              aria-describedby="emailHelp"
             />
+          </div>
+          <div className="mb-3">
             <label htmlFor="email" className="form-label">
               Email address
             </label>
             <input
               type="email"
               className="form-control"
-              value={credentials.email}
-              onChange={onChange}
+              value={formData.email}
+              onChange={handleChange}
               id="email"
               name="email"
-              aria-describedby="emailHelp"
             />
-            <div id="emailHelp" className="form-text">
-              We'll never share your email with anyone else.
-            </div>
           </div>
           <div className="mb-3">
             <label htmlFor="query" className="form-label">
               Query
             </label>
-            <input
-              type="password"
-              className="form-control custom-input"
-              value={credentials.password}
-              onChange={onChange}
-              name="password"
-              id="password"
+            <textarea
+              className="form-control"
+              value={formData.query}
+              onChange={handleChange}
+              id="query"
+              name="query"
+              rows="5"
             />
           </div>
-
           <button type="submit" className="contact-submitbtn">
             Submit
           </button>
@@ -101,5 +98,3 @@ export const Contact = (props) => {
     </>
   );
 };
-
-

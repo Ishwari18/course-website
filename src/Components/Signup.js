@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import "./css/.Signup.css";
 
 const Signup = () => {
-  const [credentials, setCredentials] = useState({ name: '', email: '', password: '' });
+  const [credentials, setCredentials] = useState({ name: '', number: '', email: '', password: '' });
   const [showAlert, setShowAlert] = useState(false);
   let navigate = useNavigate();
 
@@ -48,7 +48,7 @@ const Signup = () => {
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
-            Name
+            Name *
           </label>
           <input
             type="text"
@@ -57,6 +57,19 @@ const Signup = () => {
             onChange={onChange}
             id="name"
             name="name"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">
+            Number *
+          </label>
+          <input
+            type="number"
+            className="form-control"
+            value={credentials.number}
+            onChange={onChange}
+            id="number"
+            name="number"
           />
         </div>
         <div className="mb-3">
@@ -74,7 +87,7 @@ const Signup = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="password" className="form-label">
-            Password
+            Password *
           </label>
           <input
             type="password"

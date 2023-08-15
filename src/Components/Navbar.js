@@ -23,6 +23,11 @@ export const Navbar = () => {
                   Contact Us
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/waitlist">
+                  <u><b>Waitlist</b></u>
+                </Link>
+              </li>
             </ul>
 
             {/* Add Login and Signup buttons with Link */}

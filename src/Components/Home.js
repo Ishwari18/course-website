@@ -51,7 +51,13 @@ export const Home = () => {
           <h4>
             The Complete beggingers's Guide to blockchain and web3 development.
           </h4>
-            <div className="timer">50% off until <span className="time">{timeLeft}</span></div>
+          <div className="timer">
+            50% off until <span className="time">{timeLeft}</span>
+          </div>
+          <h4 className="heading12">
+            <span className="iitname">Limited Seats,</span>{" "}
+            <a href="/waitlist">Join the Waitlist to avail discount.</a>{" "}
+          </h4>
         </div>
       </section>
 
@@ -132,7 +138,8 @@ export const Home = () => {
           </div>
           <div className="course-content">
             <h2>
-              <a href="/about">Check out the Course content</a>
+              <a href="/about">Check out the Course content <span>&#8599;</span></a>
+              
             </h2>
           </div>
         </div>

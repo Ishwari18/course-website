@@ -8,6 +8,11 @@ const UserSchema = new Schema({
     },
     email:{
         type: String,
+        required: false,
+        unique: true
+    },
+    number: {
+        type: String, // Change this to Number if you want to store a numeric value
         required: true,
         unique: true
     },

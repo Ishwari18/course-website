@@ -9,6 +9,7 @@ import Signup from "./Components/Signup";
 import { Footer } from "./Components/Footer";
 import { Contact } from "./Components/Contact";
 import { Alert } from "./Components/Alert";
+import { Waitlist } from "./Components/Waitlist";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/waitlist" element={<Waitlist />} />
           <Route path="/login" element={<Login />} /> {/* Corrected path for Login */}
           <Route path="/signup" element={<Signup />} /> {/* Corrected path for Signup */}
         </Routes>

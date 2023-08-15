@@ -18,6 +18,16 @@ h2 {
   padding: 10px 20px; /* Add padding for spacing */
   background-color: rgb(240, 233, 252);
 }
+.first-content a{
+  text-decoration: none;
+  color: black;
+}
+.heading12:hover {
+  text-decoration: underline;
+}
+.first-content span:hover{
+  cursor: pointer;
+}
 .timer {
   font-weight: 800;
   font-size: 30px;
