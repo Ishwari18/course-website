@@ -4,8 +4,9 @@
 }
 @media (max-width: 768px) {
     .Signup {
-        background-color: rgb(240, 233, 252);
         height: auto;
         padding: 40px 30px;
+        background-color: white;
     }
+    
 }

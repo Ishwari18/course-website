@@ -8,6 +8,7 @@
   margin: 0;
 }
 
+
 .Footer-links {
   list-style-type: none;
   text-decoration: none;
@@ -46,5 +47,8 @@
   }
   .lastline-links {
     display: inline-block;
+  }
+  .footer-brandname {
+    font-size: 1em;
   }
 }

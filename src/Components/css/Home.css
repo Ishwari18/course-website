@@ -10,9 +10,40 @@
 h2 {
   font-size: 36px;
   font-weight: 600;
+  z-index: +100;
 }
 .iitname {
   background-color: #ce97f5;
+}
+.blue{
+  display: inline-block;
+  position: absolute;
+  height: 300px;
+  left: 35%;
+  top: 25%;
+  width: 400px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    80deg,
+    rgba(252, 233, 251, 0.5),
+    rgba(123, 98, 232, 0.696)
+  );
+  filter: blur(80px);
+}
+.purple{
+  display: inline-block;
+  position: absolute;
+  height: 400px;
+  left: 40%;
+  top: 35%;
+  width: 800px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    80deg,
+    rgba(252, 233, 251, 0.5),
+    rgba(221, 121, 240, 0.863)
+  );
+  filter: blur(80px);
 }
 .first {
   height: 95vh; /* Set your desired height here */
@@ -21,9 +52,6 @@ h2 {
 .first-content a {
   text-decoration: none;
   color: black;
-}
-.heading12:hover {
-  text-decoration: underline;
 }
 .first-content span:hover {
   cursor: pointer;
@@ -34,9 +62,7 @@ h2 {
   margin-top: 2%;
 }
 .time {
-  border: 1px solid black;
-  font-size: 30px;
-  background-color: rgb(249, 243, 128);
+  font-size: 20px;
   padding: 5px 20px;
 }
 .heading2 {
@@ -45,6 +71,10 @@ h2 {
   width: 70%;
   margin: auto;
   margin-bottom: 12%;
+}
+.heading12 p {
+  font-size: 15px;
+  overflow-y: hidden;
 }
 
 .second-boxes {
@@ -73,6 +103,7 @@ h2 {
 .box-2-list {
   display: flex;
   justify-content: space-between;
+  
 }
 .box-2-list div {
   margin-right: 2%;
@@ -81,18 +112,24 @@ h2 {
   background-color: #e8cdfa;
   box-shadow: 100px black;
 }
-.first-content {
+.box-2-list b {
+  background-color: #e8cdfa;
+}
+ .first-content {
   width: 48%;
   margin-left: 5%;
   margin-top: 6%;
   text-align: left;
+  z-index: +100;
 }
 .first-content h4 {
   margin-top: 1em;
+  z-index: +100;
 }
 .second {
   height: 110vh; /* Set your desired height here */
   padding: 20px; /* Add padding for spacing */
+  z-index: +100;
 }
 .third {
   height: 50vh; /* Set your desired height here */
@@ -151,6 +188,7 @@ h2 {
 .third-content {
   margin-top: 40px;
 }
+
 /* For screens with a maximum width of 768px (mobile devices) */
 @media (max-width: 768px) {
   h1 {
@@ -164,6 +202,7 @@ h2 {
   .first {
     height: auto;
     overflow-y: hidden;
+
   }
   h3 {
     font-size: 18px;
@@ -223,15 +262,18 @@ h2 {
   }
   .first {
     height: 80vh;
+    z-index: +100;
   }
 
   .timer {
-    font-size: 24px; /* Reduce font size */
+    font-size: 16px; /* Reduce font size */
     margin-top: 2%;
+    z-index: +100;
   }
   .time {
-    font-size: 16px;
+    font-size: 20px;
     display: inline-block;
+    z-index: +100;
   }
 
   .second-boxes {

@@ -40,11 +40,9 @@ export const Waitlist = () => {
     <div className="waitlist">
       <h3>
         Course instruction begins 25th of August <br />
-        Registration begins 16th of August
+        Registration begins 18th of August
       </h3>
-      <h5>
-        **Only those who join today can avail 50% discount while registering.
-      </h5>
+      
       <form className="waitlist-form" action="">
         <label htmlFor="email" className="form-label">
           Name

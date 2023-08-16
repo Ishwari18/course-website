@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./css/Home.css"; // Import the CSS file
+import { Link } from "react-router-dom"; 
 
 export const Home = () => {
   const [timeLeft, setTimeLeft] = useState("");
@@ -32,7 +33,7 @@ export const Home = () => {
         (newTimeDifference % (1000 * 60)) / 1000
       );
 
-      setTimeLeft(`${newHoursLeft}h ${newMinutesLeft}m ${newSecondsLeft}s`);
+      setTimeLeft(`${newHoursLeft}h: ${newMinutesLeft}m: ${newSecondsLeft}s`);
     }, 1000);
 
     // Clean up interval when component unmounts
@@ -42,12 +43,10 @@ export const Home = () => {
   return (
     <>
       {/* firt section */}
+
       <section className="section first">
         <div className="first-content">
-          <h2>
-            Blockchain Development Course from{" "}
-            <span className="iitname">IIT Bombay </span>
-          </h2>
+          <h2>Blockchain Development Course from IIT Bombay</h2>
           <h4>
             The Complete beggingers's Guide to blockchain and web3 development.
           </h4>
@@ -55,22 +54,24 @@ export const Home = () => {
             50% off , valid for <span className="time">{timeLeft}</span>
           </div>
           <h4 className="heading12">
-            <span className="iitname">Limited Seats,</span>{" "}
-            <a href="/waitlist">Join the Waitlist to avail discount.</a>{" "}
+            <p>* Limited Seats,</p>{" "}
+            <Link to="/waitlist" className="waitlistbtn">
+              Join the Waitlist
+            </Link>{" "}
+            
           </h4>
         </div>
       </section>
 
       {/* second section */}
       <section className=" section second">
-        
         <div className="course-content">
-            <h2>
-              <a href="/about">
-                Check out the Course content <span>&#8599;</span>
-              </a>
-            </h2>
-          </div>
+          <h2>
+            <a href="/about">
+              Check out the Course content <span>&#8599;</span>
+            </a>
+          </h2>
+        </div>
         <div className="second-boxes">
           <div className="box">
             <h3 className="heading3">What you'll learn</h3>
@@ -121,7 +122,6 @@ export const Home = () => {
       {/* Third section */}
       <section className="section third">
         <div className="third-content">
-          
           <div className="third-boxes">
             <div>
               <h3 className="heading3">This course includes:</h3>

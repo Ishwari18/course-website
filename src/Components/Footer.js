@@ -8,8 +8,8 @@ export const Footer = () => {
       <div className="footer-content">
         <ul className="Footer Footer-links">
           <li>
-            <Link className="brandname " to="/">
-              Upthrust
+            <Link className="brandname footer-brandname " to="/">
+            Web3University
             </Link>
           </li>
           <li>
