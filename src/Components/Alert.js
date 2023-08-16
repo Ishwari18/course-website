@@ -4,7 +4,7 @@ import "./css/Alert.css";
 export const Alert = () => {
   return (
     <>
-    <div className='alert'>You’ve got the freedom to learn what you want. <span className='discount'>50% discount</span> only until 17th August</div>
+    <div className='alert'> <span className='discount'>50% discount for Independence day</span> 15 - 17th August</div>
     </>
   )
 }
