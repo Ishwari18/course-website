@@ -113,31 +113,8 @@ export const About = () => {
             </div>
           ))}
         </div>
-        <div className="abttimer">
-         <span className="bg"> Purchase today to get 50% off /-</span>
-          <br /> <br />Deal lasts until <span className="time">{timeLeft}</span>
-        </div>
+        
       </div>
     </>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

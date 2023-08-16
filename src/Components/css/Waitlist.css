@@ -1,5 +1,4 @@
 .waitlist {
-  background-color: rgb(240, 233, 252);
   height: 60vh;
   padding: 40px 100px;
 }
@@ -20,7 +19,6 @@
 @media (max-width: 768px) {
   .waitlist {
     font-size: 14px;
-    background-color: rgb(240, 233, 252);
     height: auto;
     padding: 40px 40px;
   }

@@ -63,10 +63,14 @@ export const Home = () => {
 
       {/* second section */}
       <section className=" section second">
-        <h4 className="heading2">
-          Learn EVM-developemnt, Solidity, and Smart Contracts technology to
-          build production-ready apps based on the blockchain
-        </h4>
+        
+        <div className="course-content">
+            <h2>
+              <a href="/about">
+                Check out the Course content <span>&#8599;</span>
+              </a>
+            </h2>
+          </div>
         <div className="second-boxes">
           <div className="box">
             <h3 className="heading3">What you'll learn</h3>
@@ -117,6 +121,7 @@ export const Home = () => {
       {/* Third section */}
       <section className="section third">
         <div className="third-content">
+          
           <div className="third-boxes">
             <div>
               <h3 className="heading3">This course includes:</h3>
@@ -135,12 +140,6 @@ export const Home = () => {
                 <li>A Mac, PC, or Linux Machine</li>
               </ul>
             </div>
-          </div>
-          <div className="course-content">
-            <h2>
-              <a href="/about">Check out the Course content <span>&#8599;</span></a>
-              
-            </h2>
           </div>
         </div>
       </section>
